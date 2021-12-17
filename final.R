@@ -2,7 +2,7 @@
 ##Andrea Gil-Lopez
 
 data <- read.csv("voting-ineligibility-since-1980.csv")
-data$Total_Ineligible_Felon
+
 nrow(data)
 
 allowed <- subset(data, Total_Ineligible_Felon == 0)
@@ -17,8 +17,7 @@ statesallowed ##states that have always allow felons to vote only 2 states and D
 
 year1980 <- subset(data, Year == 1980 )
 year2014 <- subset(data, Year == 2014)
-mean(year1980$Total_Ineligible_Felon)
-mean(year2014$Total_Ineligible_Felon)
+mean(year2014$Total_Ineligible_Felon) - mean(year1980$Total_Ineligible_Felon) 
 
 mean(year1980$Percent.Ineligible.Because.of.Felony.Charges)
 mean(year2014$Percent.Ineligible.Because.of.Felony.Charges)
